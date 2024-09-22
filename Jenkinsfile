@@ -23,17 +23,9 @@ pipeline {
         githubPush()
     }
     options {
-        pipelineTriggers {
-            triggers {
-                cron {
-                    spec('@midnight')
-                }
-                upstream{
-                    upstreamProjects('someJob')
-                    threshold('SUCCESS')
-                }
-            }
-        }
+        pipelineTriggers([
+                githubPush()
+        ])
     }
 
 
