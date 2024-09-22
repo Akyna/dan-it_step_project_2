@@ -42,7 +42,8 @@ pipeline {
 
         stage('Echo') {
             steps {
-                echo "${env}"
+                docker --version
+                docker compose --version
             }
         }
     }
