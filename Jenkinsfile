@@ -46,7 +46,13 @@ pipeline {
                     docker --version
                     docker compose --version
                 '''
-
+            }
+        }
+        stage('TEST RESULT') {
+            steps {
+                sh '''
+                    echo "DONE"
+                '''
             }
         }
     }
