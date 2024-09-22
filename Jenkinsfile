@@ -1,15 +1,11 @@
 
 pipeline {
     agent { label 'worker' }
-//    triggers {
-//        githubPush()
-//    }
+    triggers {
+        githubPush()
+    }
     options {
-        pipelineTriggers {
-            triggers {
-                githubPush()
-            }
-        }
+        pipelineTriggers([githubPush()])
     }
 
     environment {
