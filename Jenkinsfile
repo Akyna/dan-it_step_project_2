@@ -1,5 +1,8 @@
 pipeline {
     agent { label 'worker' }
+    triggers {
+        githubPush()
+    }
 
     environment {
         AWS_REGION = 'eu-west-1'
