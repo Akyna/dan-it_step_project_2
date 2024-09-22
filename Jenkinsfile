@@ -3,9 +3,7 @@ pipeline {
     agent { label 'worker' }
     triggers {
         githubPush()
-    }
-    options {
-        pipelineTriggers([githubPush()])
+        pollSCM('H/2 * * * *')
     }
 
     environment {
