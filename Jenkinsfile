@@ -4,11 +4,11 @@ pipeline {
     triggers {
         githubPush()
     }
-    options {
-        pipelineTriggers([
-            githubPush()
-        ])
-    }
+    
+    pipelineTriggers([
+        githubPush()
+    ])
+
 
     environment {
         AWS_REGION = 'eu-west-1'
