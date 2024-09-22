@@ -39,5 +39,11 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Akyna/dan-it_step_project_2'
             }
         }
+
+        stage('Echo') {
+            steps {
+                echo "${env}"
+            }
+        }
     }
 }
