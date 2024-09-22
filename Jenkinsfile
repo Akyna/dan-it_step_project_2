@@ -44,14 +44,14 @@ pipeline {
             steps {
                 sh '''
                     docker --version
-                    docker compose --version
+                    exit 1
                 '''
             }
         }
         stage('TEST RESULT') {
             steps {
                 sh '''
-                    echo "DONE"
+                    echo "DONE 2"
                 '''
             }
         }
