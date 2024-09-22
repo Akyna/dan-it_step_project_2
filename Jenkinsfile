@@ -4,7 +4,7 @@ pipeline {
 //    triggers {
 //        githubPush()
 //    }
-    properties {
+    options {
         pipelineTriggers {
             triggers {
                 githubPush()
