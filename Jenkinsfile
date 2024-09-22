@@ -44,8 +44,9 @@ pipeline {
             steps {
                 sh '''
                     docker --version
+                    echo "EXIT_CODE_1=$?"
                     exit 123
-                    echo "EXIT_CODE=$?"
+                    echo "EXIT_CODE_2=$?"
                 '''
             }
         }
