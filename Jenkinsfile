@@ -1,13 +1,40 @@
+properties([
+        pipelineTriggers([
+                githubPush()
+        ])
+])
+//properties {
+//    pipelineTriggers {
+//        triggers {
+//            cron {
+//                spec('@midnight')
+//            }
+//            upstream{
+//                upstreamProjects('someJob')
+//                threshold('SUCCESS')
+//            }
+//        }
+//    }
+//}
 
 pipeline {
     agent { label 'worker' }
     triggers {
         githubPush()
     }
-    
-    pipelineTriggers([
-        githubPush()
-    ])
+    properties {
+        pipelineTriggers {
+            triggers {
+                cron {
+                    spec('@midnight')
+                }
+                upstream{
+                    upstreamProjects('someJob')
+                    threshold('SUCCESS')
+                }
+            }
+        }
+    }
 
 
     environment {
