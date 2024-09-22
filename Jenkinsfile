@@ -1,8 +1,8 @@
-properties([
-        pipelineTriggers([
-                githubPush()
-        ])
-])
+//properties([
+//        pipelineTriggers([
+//                githubPush()
+//        ])
+//])
 //properties {
 //    pipelineTriggers {
 //        triggers {
@@ -22,7 +22,7 @@ pipeline {
     triggers {
         githubPush()
     }
-    properties {
+    options {
         pipelineTriggers {
             triggers {
                 cron {
