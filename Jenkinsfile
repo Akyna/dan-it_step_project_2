@@ -42,8 +42,11 @@ pipeline {
 
         stage('Echo') {
             steps {
-                docker --version
-                docker compose --version
+                sh '''
+                    docker --version
+                    docker compose --version
+                '''
+
             }
         }
     }
