@@ -45,6 +45,9 @@ pipeline {
                 sh '''
                     docker build -t app:1.0.1 .
                     docker run --rm --name app_1_0_1 app:1.0.1 test
+                    if [ $? -ne 0 ]; then
+                        echo "Tests failed"
+                    fi
                 '''
             }
         }
