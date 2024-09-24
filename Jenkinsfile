@@ -43,17 +43,17 @@ pipeline {
         stage('Echo') {
             steps {
                 sh '''
-                    docker --version
-                    echo "EXIT_CODE_1=$?"
-                    exit 123
-                    echo "EXIT_CODE_2=$?"
+                    docker build -t app:1.0.1 .
+                    docker run --rm --name app_1_0_1 app:1.0.1 test
                 '''
             }
         }
         stage('TEST RESULT') {
             steps {
                 sh '''
-                    echo "DONE 2"
+                    echo "------------------------------"
+                    echo $?
+                    echo "------------------------------"
                 '''
             }
         }
