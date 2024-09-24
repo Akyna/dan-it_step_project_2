@@ -45,12 +45,7 @@ pipeline {
                 // or docker run --rm --name app_1_0_1 app:1.0.1 test || echo "Tests failed"; exit 1
                 sh '''
                     docker build -t app:1.0.1 .
-                    docker run --rm --name app_1_0_1 app:1.0.1 test || echo "Tests failed!-!"; exit 1
-                    if [ $? -ne 0 ]; then
-                        echo "Tests failed"
-                    else
-                        echo "DUDU"
-                    fi
+                    docker run --rm --name app_1_0_1 app:1.0.1 test
                 '''
             }
         }
