@@ -36,7 +36,11 @@ pipeline {
         // 1. Checkout from SCM (Git)
         stage('SCM Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Akyna/dan-it_step_project_2'
+                // git branch: 'main', url: 'https://github.com/Akyna/dan-it_step_project_2'
+                git(
+                    url: 'https://github.com/Akyna/dan-it_step_project_2',
+                    branch: 'main'
+                    )
             }
         }
 
