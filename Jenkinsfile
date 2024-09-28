@@ -49,8 +49,8 @@ pipeline {
             steps {
                 // or docker run --rm --name app_1_0_1 app:1.0.1 test || echo "Tests failed"; exit 1
                 sh '''
-                    docker build -t app:1.0.1 .
-                    docker run --rm --name app_1_0_1 app:1.0.1 test
+                    docker build -t app:1.0.2 .
+                    docker run --rm --name app_1_0_1 app:1.0.2 test
                 '''
             }
         }
