@@ -20,7 +20,7 @@ pipeline {
                 // or docker run --rm --name app_1_0_1 app:1.0.1 test || echo "Tests failed"; exit 1
                 sh '''
                     docker build -t $APP_NAME:$BUILD_NUMBER .
-                    docker run --rm --name $APP_NAME $APP_NAME:$BUILD_NUMBER test
+                    docker run --rm --name step_project_2 $APP_NAME:$BUILD_NUMBER test
                 '''
             }
         }
