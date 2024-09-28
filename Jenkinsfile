@@ -25,6 +25,7 @@ pipeline {
 
 
     environment {
+        DOCKERHUB_CREDENTIALS = credentials('akyna-dockerhub')
         AWS_REGION = 'eu-west-1'
         ECR_REPO = 'flask-api'
         AWS_ACCOUNT_ID = '381492243289'
@@ -58,6 +59,8 @@ pipeline {
                 sh '''
                     echo "------------------------------"
                     echo $?
+                    docker ps -a
+                    docker images
                     echo "------------------------------"
                 '''
             }
