@@ -2,6 +2,9 @@ name: Build, test and push Docker Image
 #run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
+  push:
+    branches:
+        - main
   workflow_dispatch:
 #    inputs:
 #      build_id:
