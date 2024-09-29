@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        run: echo "${{ inputs }}"
+        run: echo "${{ inputs.build id }}"
       - name: Checkout code
         uses: actions/checkout@v4
 #
