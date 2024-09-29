@@ -3,7 +3,7 @@ run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
 on:
   workflow_dispatch:
     inputs:
-      build id:
+      'build id':
         required: true
         type: string
       deploy_target:
@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        run: echo "${{ inputs.build id }}"
+        run: echo "${{ inputs.'build id' }}"
       - name: Checkout code
         uses: actions/checkout@v4
 #
