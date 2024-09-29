@@ -35,7 +35,7 @@ jobs:
         run: docker run --rm --name step_project_2 ${{ secrets.DOCKERHUB_USERNAME }}/step_project_2:${{ github.sha }} test
 
       - name: Push Docker Image to DockerHub
-        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-app:${{ github.sha }}
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/step_project_2:${{ github.sha }}
 
       - name: Logout from DockerHub
         run: docker logout
