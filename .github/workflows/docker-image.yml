@@ -43,3 +43,12 @@ jobs:
       - name: Logout from DockerHub
         run: docker logout
 
+  simple:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Echo 1
+        run: echo "Echo 1"
+      - name: Echo 2
+        run: echo "Echo 2"
+
