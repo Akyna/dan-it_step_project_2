@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - name: Checkout code
+        run: echo "${{ inputs }}"
+      - name: Checkout code
         uses: actions/checkout@v4
 #
 #      - name: Set up Docker Buildx
