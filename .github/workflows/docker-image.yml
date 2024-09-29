@@ -1,6 +1,6 @@
 name: Build, test and push Docker Image
 #run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
-run-name: ${{ github.actor }} is testing out step_project_2 ${{ github.job }}-${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}🚀
+run-name: ${{ github.actor }} is testing out step_project_2 -${{ github.job }}-${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}🚀
 on:
   push:
     branches:
