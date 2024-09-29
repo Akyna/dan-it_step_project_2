@@ -1,0 +1,31 @@
+name: Build, test and push Docker Image
+run-name: Deploy to ${{ inputs.deploy_target }} by @${{ github.actor }}
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+#
+#      - name: Set up Docker Buildx
+#        uses: docker/setup-buildx-action@v3.6.1
+
+#      - name: Log in to DockerHub
+#        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+#      - name: Build Docker Image
+#        run: docker build . -t ${{ secrets.DOCKERHUB_USERNAME }}/step_project_2:${{ github.sha }}
+#
+#      - name: Test Docker Image
+#        run: docker run --rm --name step_project_2 ${{ secrets.DOCKERHUB_USERNAME }}/step_project_2:${{ github.sha }} test
+
+#      - name: Push Docker Image to DockerHub
+#        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-app:${{ github.sha }}
+
+#      - name: Logout from DockerHub
+#        run: docker logout
+
